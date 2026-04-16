@@ -1,154 +1,128 @@
-/* Importar fuente Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    --color-primario: #5c182a; /* El vino tinto de tu logo */
-    --color-gris-oscuro: #5a5a5a; /* El gris de tu logo */
-    --color-fondo: #f9f9f9;
-    --fuente-principal: 'Inter', sans-serif;
+    --color-primario: #5c182a;
+    --color-primario-light: #7a2138;
+    --color-gris-oscuro: #5a5a5a;
+    --color-fondo: #f4f7f6;
+    --white: #ffffff;
 }
 
 body {
-    font-family: var(--fuente-principal);
+    font-family: 'Inter', sans-serif;
     margin: 0;
-    color: #333;
     background-color: var(--color-fondo);
-    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
-/* Encabezado con Logo */
+/* Header y Navegación */
 header {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo-completo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: inherit;
-}
-
-.logo-img {
-    height: 80px; /* Aumentamos la altura de 50px a 80px */
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-    transform: scale(1.05); /* Efecto sutil al pasar el mouse */
-}
-
-.logo-texto {
-    display: flex;
-    flex-direction: column;
-}
-
-.brand-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--color-primario);
-    margin: 0;
-    line-height: 1;
-}
-
-.slogan {
-    font-size: 0.8rem;
-    color: var(--color-gris-oscuro);
-    margin: 0;
-    letter-spacing: 1px;
-}
-
-/* Sección Hero (Bienvenida) */
-.hero {
-    background-color: var(--color-primario);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin: 0 0 20px 0;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    opacity: 0.9;
-}
-
-/* Botones */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: white;
-    color: var(--color-primario);
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #f0f0f0;
-}
-
-/* Secciones Generales */
-section {
-    max-width: 1100px;
-    margin: 60px auto;
     padding: 0 20px;
 }
 
-h2 {
-    color: var(--color-primario);
-    font-size: 2.2rem;
+.logo-nav {
+    height: 90px; /* Logo más grande como pediste */
+    width: auto;
+    transition: 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-gris-oscuro);
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 40px;
 }
 
-/* Servicios como tarjetas */
-.servicios-grid {
+/* Botones */
+.btn, .btn-submit {
+    background: var(--color-primario);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-alt { background: var(--white); color: var(--color-primario); margin-left: 10px; }
+.btn-small { background: var(--color-primario); color: white !important; padding: 8px 15px; border-radius: 4px; }
+
+/* Sección Nosotros */
+.nosotros-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 80px 20px;
 }
 
-.servicio-card {
+.logo-nosotros {
+    max-width: 300px; /* Logo vertical resaltado */
+    height: auto;
+}
+
+.fundador-card {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--color-primario);
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 4px solid var(--color-primario);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.servicio-card h3 {
-    color: #333;
-    margin-top: 0;
+/* Formularios */
+.forms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+    background: #ebeeee;
 }
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para el layout */
+}
+
+.btn-submit { width: 100%; }
+.btn-alt-form { background: var(--color-gris-oscuro); }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: #1a1a1a;
     color: white;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
-    margin-top: auto;
 }
