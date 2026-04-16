@@ -3,26 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIMATIC SAS | Ingeniería</title>
+    <title>BIMATIC SAS | Ingeniería Estructural Inteligente</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo-completo">
-                <img src="Bimatic-horizontal.png" alt="Logo BIMATIC" class="logo-img">
+            <a href="#" class="logo-link">
+                <img src="Bimatic-horizontal.png" alt="Logo BIMATIC SAS" class="logo-nav">
             </a>
             <nav>
-                <a href="mailto:contacto@bimatic.com" class="btn">Contáctanos</a>
+                <ul class="nav-links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#cotizacion">Cotizar</a></li>
+                    <li><a href="#contacto" class="btn-small">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Ingeniería Estratégica <br> para Estructuras Seguras</h1>
-        <p>Expertos en diseño estructural inteligente y soluciones de automatización BIM para proyectos de alta complejidad.</p>
-        <a href="#servicios" class="btn">Explora Nuestros Servicios</a>
+        <div class="hero-content">
+            <h1>Ingeniería Estratégica <br> para Estructuras Seguras</h1>
+            <p>Expertos en diseño estructural inteligente y automatización BIM para proyectos de alta complejidad.</p>
+            <div class="hero-btns">
+                <a href="#servicios" class="btn">Nuestros Servicios</a>
+                <a href="#cotizacion" class="btn btn-alt">Solicitar Cotización</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="section-alt">
+        <div class="container">
+            <div class="nosotros-grid">
+                <div class="nosotros-texto">
+                    <h2>Sobre BIMATIC SAS</h2>
+                    <p>Somos una firma de ingeniería con sede en Bogotá, especializada en la convergencia del diseño estructural y la tecnología. Transformamos la ingeniería tradicional mediante flujos de trabajo automatizados.</p>
+                    <div class="fundadores">
+                        <div class="fundador-card">
+                            <h4>Laura Sofia Pardo G.</h4>
+                            <p>Ingeniera Civil & Co-fundadora. Especialista en diseño NSR-10 y automatización con Python.</p>
+                        </div>
+                        <div class="fundador-card">
+                            <h4>Jhon Sebastian Niño M.</h4>
+                            <p>Co-fundador & Socio Estratégico. Dirección técnica y coordinación de proyectos BIM.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-img">
+                    <img src="bimatic-vertical.png" alt="BIMATIC Vertical" class="logo-nosotros">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="servicios">
@@ -30,22 +64,61 @@
         <div class="servicios-grid">
             <div class="servicio-card">
                 <h3>Modelado Estructural BIM</h3>
-                <p>Diseño avanzado y coordinación de estructuras de concreto y acero utilizando Revit y Tekla.</p>
+                <p>Coordinación y diseño en concreto reforzado y acero con Revit y Tekla Structures.</p>
             </div>
             <div class="servicio-card">
                 <h3>Consultoría y Análisis</h3>
-                <p>Análisis sísmico y estructural bajo normativas vigentes (NSR-10) con software de vanguardia.</p>
+                <p>Análisis sísmico bajo NSR-10 con niveles de disipación de energía DES.</p>
             </div>
             <div class="servicio-card">
-                <h3>Automatización de Procesos</h3>
-                <p>Desarrollo de scripts y herramientas personalizadas para optimizar flujos de trabajo en ingeniería.</p>
+                <h3>Automatización</h3>
+                <p>Desarrollo de scripts en Python para optimizar cálculos estructurales complejos.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>BIMATIC SAS © 2026 | Bogotá, Colombia</p>
-        <p>Diseño Estructural Inteligente</p>
+    <section id="cotizacion" class="section-forms">
+        <div class="forms-grid">
+            <div class="form-container">
+                <h3>Cotiza tu Proyecto</h3>
+                <form id="form-cotizar">
+                    <input type="text" placeholder="Nombre Completo" required>
+                    <select required>
+                        <option value="">Tipo de Proyecto</option>
+                        <option value="residencial">Residencial</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="consultoria">Consultoría BIM</option>
+                    </select>
+                    <input type="number" placeholder="Área Aproximada (m2)">
+                    <textarea placeholder="Cuéntanos sobre el proyecto..."></textarea>
+                    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h3>Consultas Técnicas</h3>
+                <p>¿Tienes dudas sobre normativa o geotecnia? Escríbenos.</p>
+                <form id="form-consultas">
+                    <input type="email" placeholder="Tu Correo Electrónico" required>
+                    <textarea placeholder="Escribe tu consulta técnica aquí..." required></textarea>
+                    <button type="submit" class="btn-submit btn-alt-form">Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>BIMATIC SAS</h4>
+                <p>Bogotá, Colombia</p>
+                <p>Ingeniería Estructural Inteligente</p>
+                <p>contacto@bimatic.com</p>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 | Diseñado para la Excelencia Estructural</p>
+            </div>
+        </div>
     </footer>
 
 </body>
